@@ -17,22 +17,20 @@ export default {
   },
   mounted() {
     this.getParent(this.products);
-    this.printRevers();
+    this.printParent();
   },
   methods: {
     getParent(arr) {
       arr.map((product) => {
-        if((product.children).length!=0){
-          this.parents.push(product.name)
-        }
-        
         if (product.children.length != 0) {
           this.getParent(product.children);
+          this.parents.push(product.name);
         }
       });
     },
-    printRevers(){
-      console.log(this.parents.reverse())
+    printParent(){
+      console.log(this.parents)
+      console.log('Total Count: ', (this.parents).length);
     }
   },
 };

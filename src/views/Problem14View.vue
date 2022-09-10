@@ -10,20 +10,25 @@ export default {
   components: {},
   data() {
     return {
+      childs: [],
       products: JSON.parse(JSON.stringify(jsonfile)),
     };
   },
   mounted() {
     this.getChildren(this.products);
+    this.printChild();
   },
   methods: {
     getChildren(arr) {
       arr.map((product) => {
-        console.log(product.name);
+        this.childs.push(product.name);
         if (product.children.length != 0) {
           this.getChildren(product.children);
         }
       });
+    },
+    printChild(){
+      console.log(this.childs);
     },
   },
 };
