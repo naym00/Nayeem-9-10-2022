@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/prob1">Prob 1</router-link> |
+      <router-link to="/prob2">Prob 2</router-link> |
+      <router-link to="/prob3">Prob 3</router-link> |
+      <router-link to="/prob4">Prob 4</router-link> |
+      <router-link to="/prob5">Prob 5</router-link> |
+      <router-link to="/prob6">Prob 6</router-link> |
+      <router-link to="/prob7">Prob 7</router-link> |
+      <router-link to="/prob8">Prob 8</router-link> |
+      <router-link to="/prob9">Prob 9</router-link> |
+      <router-link to="/prob10">Prob 10</router-link> |
+      <router-link to="/prob11">Prob 11</router-link> |
+      <router-link to="/prob12">Prob 12</router-link> |
+      <router-link to="/prob13">Prob 13</router-link> |
+      <router-link to="/prob14">Prob 14</router-link> |
+      <router-link to="/prob15">Prob 15</router-link> 
+
+    </nav>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
