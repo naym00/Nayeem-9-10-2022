@@ -10,6 +10,7 @@ export default {
   components: {},
   data() {
     return {
+      vowelCount: 0,
       demoStr: 'How are you',
     };
   },
@@ -18,24 +19,25 @@ export default {
   },
   methods: {
     numbersOfVowel() {
-      let count = 0;
-      for (let i = 0; i < this.demoStr.length; i++) {
+      [...this.demoStr].forEach(eachChar => {
         if (
-          this.demoStr.charAt(i) == "a" ||
-          this.demoStr.charAt(i) == "e" ||
-          this.demoStr.charAt(i) == "i" ||
-          this.demoStr.charAt(i) == "o" ||
-          this.demoStr.charAt(i) == "u" ||
-          this.demoStr.charAt(i) == "A" ||
-          this.demoStr.charAt(i) == "E" ||
-          this.demoStr.charAt(i) == "I" ||
-          this.demoStr.charAt(i) == "O" ||
-          this.demoStr.charAt(i) == "U"
+          eachChar == "a" ||
+          eachChar == "e" ||
+          eachChar == "i" ||
+          eachChar == "o" ||
+          eachChar == "u" ||
+          eachChar == "A" ||
+          eachChar == "E" ||
+          eachChar == "I" ||
+          eachChar == "O" ||
+          eachChar == "U"
         ) {
-          count++;
+          this.vowelCount++;
         }
-      }
-      console.log(count);
+      })
+
+      console.log(this.vowelCount);
+      
     },
   },
 };
